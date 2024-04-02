@@ -68,6 +68,6 @@ const frenchTranslation = {
     "【CONT】 All of your characters get +1000 power and +1 soul.",
     "(【GATE】: When this card triggers, you may choose 1 climax in your waiting room, and return it to your hand)"
   ]
-}
+} as { [key: string]: string[] }
 
 export default frenchTranslation
