@@ -1,13 +1,16 @@
 /// <reference types="vitest" />
 import react from "@vitejs/plugin-react"
 import path from "path"
+import DynamicPublicDirectory from "vite-multiple-assets"
+
+const dirAssets = ["public", "DB"]
 
 import { defineConfig } from "vite"
 import eslint from "vite-plugin-eslint"
 
 // https://vitejs.dev/config/
 export default defineConfig(env => ({
-  plugins: [react(), env.mode !== "test" && eslint()],
+  plugins: [react(), env.mode !== "test" && eslint(), DynamicPublicDirectory(dirAssets)],
   define: {
     APP_VERSION: JSON.stringify(process.env.npm_package_version)
   },

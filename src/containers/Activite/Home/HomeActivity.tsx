@@ -38,7 +38,10 @@ const HomeActivity = () => {
   )
 
   useEffect(() => {
-    import("../../../../DB/" + filename).then(data => setData(data.default as ICard[]))
+    if (filename !== "")
+      fetch("/" + filename)
+        .then(resp => resp.json())
+        .then(data => setData(data as ICard[]))
   }, [filename, setData])
 
   return (
