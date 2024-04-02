@@ -7,7 +7,9 @@ import Box from "@mui/material/Box"
 import Card from "@mui/material/Card"
 import CardHeader from "@mui/material/CardHeader"
 import CardMedia from "@mui/material/CardMedia"
+import FormControl from "@mui/material/FormControl"
 import IconButton from "@mui/material/IconButton"
+import InputLabel from "@mui/material/InputLabel"
 import MenuItem from "@mui/material/MenuItem"
 import Modal from "@mui/material/Modal"
 import Select, { SelectChangeEvent } from "@mui/material/Select"
@@ -47,13 +49,16 @@ const HomeActivity = () => {
   return (
     <>
       Bienvenue dans cette application de visualisation de carte WeissSchwarz en Français <br />
-      <Select value={filename} label="Filename" onChange={handleChange}>
-        {dbfiles.map((filename, idx) => (
-          <MenuItem key={filename} value={filename}>
-            {dbextension[idx]}
-          </MenuItem>
-        ))}
-      </Select>
+      <FormControl fullWidth>
+        <InputLabel id="filename-label">Selectionner l&apos;extension</InputLabel>
+        <Select labelId="filename-label" value={filename} label="Filename" onChange={handleChange}>
+          {dbfiles.map((filename, idx) => (
+            <MenuItem key={filename} value={filename}>
+              {dbextension[idx]}
+            </MenuItem>
+          ))}
+        </Select>
+      </FormControl>
       <Grid container justifyContent="center" spacing={1}>
         {data.map(card => (
           <Grid key={card.code} item lg={3} md={4} xs={12} sm={6}>

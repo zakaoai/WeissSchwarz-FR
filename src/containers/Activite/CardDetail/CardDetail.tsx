@@ -33,7 +33,7 @@ const CardDetail = ({ card }: { card: Card }) => {
               Abilités
             </TableCell>
             <TableCell>
-              {card.ability.map((ability, idx) => (
+              {(frenchTranslation[card.code] || card.ability).map((ability, idx) => (
                 <ul key={`${card.code}-${idx}`}>{ability}</ul>
               ))}
             </TableCell>
