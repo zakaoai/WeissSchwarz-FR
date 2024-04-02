@@ -1,0 +1,24 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "eslint.nodePath": ".yarn/sdks",
+  "files.eol": "\n",
+  "prettier.configPath": ".prettierrc",
+  "prettier.prettierPath": ".yarn/sdks/prettier/index.cjs",
+  "search.exclude": {
+    "**/.pnp.*": true,
+    "**/.yarn": true
+  },
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.tsdk": ".yarn/sdks/typescript/lib",
+  "vite.buildCommand": "yarn build",
+  "vite.devCommand": "yarn run dev",
+  "vite.showTerminal": true,
+  "vitest.commandLine": "yarn test --",
+  "vitest.enable": true,
+  "vitest.showFailMessages": true
+}
