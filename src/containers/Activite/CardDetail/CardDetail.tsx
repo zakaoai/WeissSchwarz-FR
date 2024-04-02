@@ -1,3 +1,4 @@
+import frenchTranslation from "@/constants/frenchTranslation"
 import Card from "@/interfaces/DB/Card"
 import Paper from "@mui/material/Paper"
 import Table from "@mui/material/Table"
