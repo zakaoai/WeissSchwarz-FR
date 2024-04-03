@@ -1,7 +1,7 @@
 const frenchTranslation = {
   "ATLA/WX04-T01": [
     "【AUTO】 Quand cette carte est placé sur le stage depuis votre main, vous pouvez placer les 3 premières cartes de votre deck dans la waiting room.",
-    '【AUTO】 Lien/"Aang: Trapped in a Cave" [(1)] (Quand cette carte est joué et placé sur le stage depuis votre main, vous pouvez payer le coût. Si vous le faite choisissez 1 "Aang: Trapped in a Cave" dans votre waiting room, ajouter le à votre main)'
+    '【AUTO】 Bond/"Aang: Trapped in a Cave" [(1)] (Quand cette carte est joué et placé sur le stage depuis votre main, vous pouvez payer le coût. Si vous le faite choisissez 1 "Aang: Trapped in a Cave" dans votre waiting room, ajouter le à votre main)'
   ],
   "ATLA/WX04-T02": [
     "【CONT】 Si un marqueur est présent sous cette carte, cette carte gagne +3000 de puissance.",
@@ -12,7 +12,7 @@ const frenchTranslation = {
   ],
   "ATLA/WX04-T04": [
     "【CONT】 Cette carte ne peut pas être attaqué de coté.",
-    "【AUTO】 Accelerate [Mettre 1 personnage de《World of Avatar》de votre waiting room au bas de votre clock] Au début de votre climax phase, vous pouvez payer le coût. Si vous le faite, regarder la première carte de votre deck, posez la sur votre deck ou dans votre waiting room, et cette carte gagne l'abilité suivante jusqu'a la fin du tour. \"【AUTO】Quand la carte de l'opposant deviens 【REVERSE】, vous pouvez choisir 1 \"Katara's Necklace\" ou 1 personnage de《World of Avatar》 dans votre waiting room, et la retourner dans votre main.\""
+    '【AUTO】 Accelerate [Mettre 1 personnage de《World of Avatar》de votre waiting room au bas de votre clock] Au début de votre climax phase, vous pouvez payer le coût. Si vous le faite, regarder la première carte de votre deck, posez la sur votre deck ou dans votre waiting room, et cette carte gagne la capacité suivante jusqu\'a la fin du tour. "【AUTO】Quand la carte de l\'opposant deviens 【REVERSE】, vous pouvez choisir 1 "Katara\'s Necklace" ou 1 personnage de《World of Avatar》 dans votre waiting room, et la retourner dans votre main."'
   ],
   "ATLA/WX04-T05": [
     '【AUTO】 Quand vous utiliser la "Backup" de cette carte, si vous avez un personnage de《World of Avatar》, choisissez 1 de vos personnages en combat, ce personnage gagnera +1000 de puissance jusqu\'à la fin du tour.',
@@ -23,52 +23,52 @@ const frenchTranslation = {
     "【ACT】 [(2) 【REST】cette carte] Choississez 1 personnage de《World of Avatar》 dans votre waiting room, et la retourner dans votre main."
   ],
   "ATLA/WX04-T07": [
-    "【CONT】 cette carte gets +1500 power for each character in your opponent's back stage.",
-    "【AUTO】 Encore [Put 1 personnage de《World of Avatar》 from your hand into your waiting room] (When cette carte is put into your waiting room from the stage, you may pay the cost. If you do, return cette carte to its previous stage position as 【REST】)"
+    "【CONT】 cette  gagne +1500 de puissance pour chaque personnage dans le back stage de votre adversaire.",
+    "【AUTO】 Encore [Mettez 1 personnage de《World of Avatar》 de votre main à votre waiting room] (Quand cette carte est posé dans votre waiting room depuis le stage vous pouvez payer le coût. Si vous le faites, retourner cette carte à sa dernière position sur le stage en position【REST】)"
   ],
   "ATLA/WX04-T08": [
-    "【CONT】 All of your characters get +1000 power and +1 soul.",
-    "(【RETURN】: When cette carte triggers, you may choose 1 of your opponent's characters, and return it to his or her hand)"
+    "【CONT】 Tout vos personnage gagne +1000 de puissance et +1 soul.",
+    "(【RETURN】: Quand cette carte triggers, vous pouvez choisir 1 personnage de votre adversaire, et le retourner dans sa main)"
   ],
   "ATLA/WX04-T09": [
-    "【AUTO】 Quand cette carte est placé sur le stage depuis votre main, révéler la première carte de votre deck. Si cette carte est un événement ou un personnage de《World of Avatar》, put it into your hand, choose 1 card in your hand, and put it into your waiting room. (Otherwise, return it to its original place)",
-    "【AUTO】 When cette carte attacks, choose 1 of your 《World of Avatar》 characters, and that character gets +1500 power until end of turn."
+    "【AUTO】 Quand cette carte est placé sur le stage depuis votre main, révéler la première carte de votre deck. Si cette carte est un événement ou un personnage de《World of Avatar》, mettez la dans votre main, choisissez 1 carte de votre main, et placer la dans votre waiting room. (Autrement, retourner là à sa place d'origine)",
+    "【AUTO】 Quand cette carte attaque, choisissez 1 de vos personnage de 《World of Avatar》, ce personnage gagne +1500 de puissance jusqu'à la fin du tour."
   ],
   "ATLA/WX04-T10": [
-    "【CONT】 Pendant votre tour, all of your other 《World of Avatar》 characters get +500 power.",
-    "【ACT】 Brainstorm [(1) 【REST】 cette carte] Flip over 5 cards from the top of your deck, and put them into your waiting room. For each climax revealed among those cards, draw up to 1 card."
+    "【CONT】 Pendant votre tour, tout vos autres personnages de 《World of Avatar》 gagne +500 de puissance.",
+    "【ACT】 Brainstorm [(1) 【REST】 cette carte] Retourner les 5 premières carte de votre deck, et poser les dans votre waiting room. Pour chaque climax révélé parmis ces cartes, tirez 1 carte."
   ],
   "ATLA/WX04-T11": [
-    '【CONT】 If your level is 2 or higher, cette carte gets the following ability. "【ACT】 [(1) Put 1 card from your hand into your waiting room & Put cette carte into your waiting room] Choose up to 1 "Aang: Avatar State" in your hand, and put it in the stage position that cette carte was in."',
-    "【CONT】 Assist All of your characters in front of cette carte get +500 power."
+    '【CONT】 Si vous êtes niveau 2 ou plus, cette carte gagne la capacité suivante. "【ACT】 [(1) Mettre 1 carte de votre main à votre waiting room & Mettre cette carte dans votre waiting room] Choisissez 1 "Aang: Avatar State"  dans votre main, et posez la sur le stage à la position où cette carte était."',
+    "【CONT】 Assist Tout vos personnage en face de cette carte gagne +500 de puissance."
   ],
   "ATLA/WX04-T12": [
-    "【CONT】 If all of your characters are 《World of Avatar》, cette carte gets +1000 power.",
-    "【AUTO】 [(1) Put 1 card from your hand into your waiting room] Quand cette carte est placé sur le stage depuis votre main, you may pay the cost. If you do, search your deck for up to 1 personnage de《World of Avatar》, reveal it to your opponent, put it into your hand, and shuffle your deck."
+    "【CONT】 Si tout vos personnage sont de 《World of Avatar》, cette carte gagne +1000 de puissance.",
+    "【AUTO】 [(1) Poser 1 carte de votre main à votre waiting room] Quand cette carte est placé sur le stage depuis votre main, vous pouvez payer le coût. Si vous le faite, chercher dans votre deck to 1 personnage de《World of Avatar》, révélé le à votre adversaire, poser là dans votre main, et mélanger votre deck."
   ],
   "ATLA/WX04-T13": [
-    "【AUTO】 When your climax is placed on your climax area, choose 1 of your characters, and that character gets +1 soul until end of turn.",
-    "【ACT】 [【REST】 cette carte] Choose 1 of your 《World of Avatar》 characters, and that character gets +1500 power until end of turn."
+    "【AUTO】 Quand votre climax est placé dans la zone climax, choisissez 1 de vos personnages, et ce personnage gagnera +1 soul jusqu'à la fin du tour.",
+    "【ACT】 [【REST】 cette carte] Choisissez 1 de vos personnage de《World of Avatar》, et ce personnage gagnera +1500 de puisance jusquà'à la fin du tour."
   ],
   "ATLA/WX04-T14": ["-"],
   "ATLA/WX04-T15": [
-    "【CONT】 Pendant votre tour, cette carte gets +1000 power for each of your other 《World of Avatar》 characters.",
-    "【AUTO】 When cette carte's battle opponent becomes 【REVERSE】, if there is a climax in your climax area, you may choose 1 personnage de《World of Avatar》 dans votre waiting room, and put it into your stock."
+    "【CONT】 Pendant votre tour, cette carte gagne +1000 de puissance pour chaque autre personnage de《World of Avatar》.",
+    "【AUTO】 Quand le combatant adverse de cette carte devient 【REVERSE】, s'il y a un climax dans votre zone climax, vous pouvez choisir 1 personnage de《World of Avatar》 dans votre waiting room, et la mettre dans votre stock."
   ],
   "ATLA/WX04-T16": [
-    "【AUTO】 Quand cette carte est placé sur le stage depuis votre main, search your deck for up to 1 personnage de《World of Avatar》, reveal it to your opponent, put it into your hand, and shuffle your deck.",
-    '【AUTO】 【CXCOMBO】 When cette carte attacks, if "Fury of the Ocean Spirit" is in your climax area, and you have 2 or more other 《World of Avatar》 characters, deal 1 damage to your opponent, and cette carte gets +1000 power until the end of your opponent\'s next turn. (Damage may be canceled)'
+    "【AUTO】 Quand cette carte est placé sur le stage depuis votre main, chercher dans votre deck 1 personnage de《World of Avatar》, révélé le à votre adversaire, posé la dans votre main, et mélanger votre deck.",
+    '【AUTO】 【CXCOMBO】 Quand cette carte attaque, si "Fury of the Ocean Spirit" est dans votre zone climax, et que vous avez 2 personnage de《World of Avatar》 ou plus, faite 1 de dégat à votre adversaire, et cette carte gagne +1000 de puissance jusqu\'à la fin du prochain. (Le dégat peut être annulé)'
   ],
   "ATLA/WX04-T17": [
-    '【CONT】 If you have 2 or more other 《World of Avatar》 characters, cette carte gets +500 power and the following ability. "【AUTO】 [(1)] At the beginning of your opponent\'s attack phase, you may pay the cost. If you do, choose cette carte and 1 of your 《World of Avatar》 characters, and exchange them as 【STAND】."',
-    "【AUTO】 Quand cette carte est placé sur le stage depuis votre main, you may put the top card of your clock into your waiting room."
+    '【CONT】Si vous avez 2 personnage de《World of Avatar》ou plus, cette carte gagne +500  de puissance et la capacité suivante. "【AUTO】 [(1)] Au début de la phase d\'attaque de votre adversaire, vous pouvez payer le coût. si vous le faite, choisissez cette carte and 1 de vos personnages de 《World of Avatar》, et échanger les en 【STAND】."',
+    "【AUTO】 Quand cette carte est placé sur le stage depuis votre main, vous pouvez mettre la première carte de votre clock dans votre waiting room."
   ],
   "ATLA/WX04-T18": [
-    "Put the top 2 cards of your deck into your waiting room, choose up to 1 level X or lower personnage de《World of Avatar》 dans votre waiting room, et la retourner dans votre main. X is equal to the total level of the cards put into your waiting room by this effect. (Climax are regarded as level 0)"
+    "Mettez les 2 première carte de votre deck dans votre waiting room, choisissez 1 personnage de niveau X ou moins de《World of Avatar》 dans votre waiting room, et la retourner dans votre main. X est égale au total des niveau des cartes posé dans votre waiting room par cette effet. (les Climax sont traité comme niveau 0)"
   ],
   "ATLA/WX04-T19": [
-    "【CONT】 All of your characters get +1000 power and +1 soul.",
-    "(【GATE】: When cette carte triggers, you may choose 1 climax dans votre waiting room, et la retourner dans votre main)"
+    "【CONT】 Tout vos personnage gagne +1000 de puissance et +1 soul.",
+    "(【GATE】: Quand cette carte triggers, vous pouvez choisir 1 climax dans votre waiting room, et la retourner dans votre main)"
   ]
 } as { [key: string]: string[] }
 
