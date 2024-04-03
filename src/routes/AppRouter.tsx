@@ -6,11 +6,13 @@ import { Navigate, Route } from "react-router-dom"
 import { lazy } from "react"
 
 const HomeActivity = lazy(async () => await import("@/containers/Activite/Home/HomeActivity"))
+const RegleActivity = lazy(async () => await import("@/containers/Activite/Regle/Regle"))
 
 const AppRouter = () => (
   <Route element={<ContextLayout />}>
     <Route element={<Layout />}>
       <Route index path={SiteMap.ACCUEIL.path} element={<HomeActivity />} />
+      <Route index path={SiteMap.REGLE.path} element={<RegleActivity />} />
     </Route>
 
     <Route path="*" element={<Navigate replace to={SiteMap.ACCUEIL.path} />} />
