@@ -49,7 +49,7 @@ const HomeActivity = () => {
   return (
     <>
       Bienvenue dans cette application de visualisation de carte WeissSchwarz en Français <br />
-      <FormControl fullWidth>
+      <FormControl fullWidth sx={{ marginY: 2 }}>
         <InputLabel id="filename-label">Selectionner l&apos;extension</InputLabel>
         <Select labelId="filename-label" value={filename} label="Filename" onChange={handleChange}>
           {dbfiles.map((filename, idx) => (
