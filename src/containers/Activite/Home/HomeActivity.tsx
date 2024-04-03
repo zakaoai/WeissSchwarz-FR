@@ -78,7 +78,7 @@ const HomeActivity = () => {
           </Grid>
         ))}
       </Grid>
-      <Modal open={card !== undefined} onClose={handleClose}>
+      <Modal open={card !== undefined} onClose={handleClose} sx={{ overflow: "scroll" }}>
         <Box sx={{ margin: "auto", width: "90%" }}>
           <Box sx={{ alignContent: "right" }}>
             <IconButton aria-label="close" size="small" onClick={handleClose}>
