@@ -1,3 +1,4 @@
+import { SpeedInsights } from "@vercel/speed-insights/react"
 import * as React from "react"
 import { createRoot } from "react-dom/client"
 import App from "./App.tsx"
@@ -15,6 +16,7 @@ if (rootDom != null) {
   await prepare().finally(() => {
     createRoot(rootDom).render(
       <React.StrictMode>
+        <SpeedInsights />
         <App />
       </React.StrictMode>
     )
