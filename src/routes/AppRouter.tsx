@@ -7,12 +7,14 @@ import { lazy } from "react"
 
 const HomeActivity = lazy(async () => await import("@/containers/Activite/Home/HomeActivity"))
 const RegleActivity = lazy(async () => await import("@/containers/Activite/Regle/Regle"))
+const RemerciementActivity = lazy(async () => await import("@/containers/Activite/Remerciement/Remerciement"))
 
 const AppRouter = () => (
   <Route element={<ContextLayout />}>
     <Route element={<Layout />}>
       <Route index path={SiteMap.ACCUEIL.path} element={<HomeActivity />} />
       <Route index path={SiteMap.REGLE.path} element={<RegleActivity />} />
+      <Route index path={SiteMap.REMERCIEMENT.path} element={<RemerciementActivity />} />
     </Route>
 
     <Route path="*" element={<Navigate replace to={SiteMap.ACCUEIL.path} />} />

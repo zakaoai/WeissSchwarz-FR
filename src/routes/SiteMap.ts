@@ -8,6 +8,10 @@ const SiteMap: ISiteMap = {
   REGLE: {
     path: "/app/regle",
     label: "Règles"
+  },
+  REMERCIEMENT: {
+    path: "/app/remerciement",
+    label: "Remerciement"
   }
 }
 
