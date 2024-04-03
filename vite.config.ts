@@ -7,10 +7,11 @@ const dirAssets = ["public", "DB"]
 
 import { defineConfig } from "vite"
 import eslint from "vite-plugin-eslint"
+import { nodePolyfills } from "vite-plugin-node-polyfills"
 
 // https://vitejs.dev/config/
 export default defineConfig(env => ({
-  plugins: [react(), env.mode !== "test" && eslint(), DynamicPublicDirectory(dirAssets)],
+  plugins: [react(), env.mode !== "test" && eslint(), DynamicPublicDirectory(dirAssets), nodePolyfills()],
   define: {
     APP_VERSION: JSON.stringify(process.env.npm_package_version)
   },
