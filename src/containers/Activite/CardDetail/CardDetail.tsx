@@ -26,16 +26,13 @@ const CardDetail = ({ card }: { card: Card }) => {
           </TableRow>
           <TableRow>
             <TableCell align="center" colSpan={2} scope="row">
-              <img src={card.image} />
+              <img src={card.image} style={{ width: "100%" }} />
             </TableCell>
           </TableRow>
           <TableRow>
-            <TableCell component="th" scope="row">
-              Abilités
-            </TableCell>
-            <TableCell>
+            <TableCell colSpan={2}>
               {(frenchTranslation[card.code] || card.ability).map((ability, idx) => (
-                <ul key={`${card.code}-${idx}`}>{ability}</ul>
+                <p key={`${card.code}-${idx}`}>{ability}</p>
               ))}
             </TableCell>
           </TableRow>
