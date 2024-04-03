@@ -1,91 +1,52 @@
-import dbextension from "@/constants/dbextension"
-import dbfiles from "@/constants/dbfiles"
-import ICard from "@/interfaces/DB/Card"
+import GameCard from "@/components/GameCard/GameCard"
+import useHomeActivity from "@/hooks/containers/Activite/Home/useHomeActivity"
 import CloseIcon from "@mui/icons-material/Close"
 import { Grid } from "@mui/material"
 import Box from "@mui/material/Box"
-import Card from "@mui/material/Card"
-import CardHeader from "@mui/material/CardHeader"
-import CardMedia from "@mui/material/CardMedia"
-import FormControl from "@mui/material/FormControl"
 import IconButton from "@mui/material/IconButton"
-import InputLabel from "@mui/material/InputLabel"
-import MenuItem from "@mui/material/MenuItem"
 import Modal from "@mui/material/Modal"
-import Select, { SelectChangeEvent } from "@mui/material/Select"
-import { useCallback, useEffect, useState } from "react"
 import CardDetail from "../CardDetail/CardDetail"
+import Filter from "./Filter"
 /**
  * Activité d'accueil du projet
  */
 const HomeActivity = () => {
-  const [data, setData] = useState<ICard[]>(Array<ICard>(0))
-  const [card, setCard] = useState<ICard | undefined>(undefined)
-
-  const [filename, setFilename] = useState("")
-
-  const handleChange = (event: SelectChangeEvent) => {
-    setFilename(event.target.value as string)
-  }
-
-  const handleClose = useCallback(() => {
-    setCard(undefined)
-  }, [setCard])
-
-  const onClick = useCallback(
-    (card: ICard) => {
-      setCard(card)
-    },
-    [setCard]
-  )
-
-  useEffect(() => {
-    if (filename !== "")
-      fetch("/" + filename)
-        .then(resp => resp.json())
-        .then(data => setData(data as ICard[]))
-  }, [filename, setData])
+  const {
+    handleChangeFileName,
+    filename,
+    cards,
+    onClickCard,
+    card,
+    handleModalClose,
+    rarity,
+    handleChangeRarity,
+    raritys,
+    handleClearRarity
+  } = useHomeActivity()
 
   return (
     <>
       Bienvenue dans cette application de visualisation de carte WeissSchwarz en Français <br />
-      <FormControl fullWidth sx={{ marginY: 2 }}>
-        <InputLabel id="filename-label">Selectionner l&apos;extension</InputLabel>
-        <Select labelId="filename-label" value={filename} label="Filename" onChange={handleChange}>
-          {dbfiles
-            .map((filename, idx) => ({ filename, extension: dbextension[idx] }))
-            .toSorted((a, b) => a.extension.localeCompare(b.extension))
-            .map(({ filename, extension }) => (
-              <MenuItem key={filename} value={filename}>
-                {extension}
-              </MenuItem>
-            ))}
-        </Select>
-      </FormControl>
+      <Filter
+        handleChangeExtension={handleChangeFileName}
+        filename={filename}
+        rarity={rarity}
+        handleChangeRarity={handleChangeRarity}
+        raritys={raritys}
+        handleClearRarity={handleClearRarity}
+      />
       <Grid container justifyContent="center" spacing={1}>
-        {data.map(card => (
-          <Grid key={card.code} item lg={3} md={4} xs={12} sm={6}>
-            <Card>
-              <CardHeader title={card.name} subheader={card.code} />
-              <CardMedia
-                component="img"
-                width="100%"
-                image={card.image}
-                alt={card.name}
-                onClick={() => onClick(card)}
-              />
-            </Card>
-          </Grid>
+        {cards.map(card => (
+          <GameCard key={card.code} card={card} onClick={onClickCard} />
         ))}
       </Grid>
-      <Modal open={card !== undefined} onClose={handleClose} sx={{ overflow: "scroll" }}>
+      <Modal open={card !== undefined} onClose={handleModalClose} sx={{ overflow: "scroll" }}>
         <Box sx={{ margin: "auto", width: "90%" }}>
           <Box sx={{ alignContent: "right" }}>
-            <IconButton aria-label="close" size="small" onClick={handleClose}>
+            <IconButton aria-label="close" size="small" onClick={handleModalClose}>
               <CloseIcon fontSize="inherit" />
             </IconButton>
           </Box>
-
           {card !== undefined ? <CardDetail card={card} /> : "Waiting"}
         </Box>
       </Modal>
