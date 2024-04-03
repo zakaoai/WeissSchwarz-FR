@@ -10,7 +10,7 @@ import TableRow from "@mui/material/TableRow"
 const CardDetail = ({ card }: { card: Card }) => {
   return (
     <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+      <Table>
         <TableBody>
           <TableRow>
             <TableCell component="th" scope="row">

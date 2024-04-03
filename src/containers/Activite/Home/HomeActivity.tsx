@@ -52,11 +52,14 @@ const HomeActivity = () => {
       <FormControl fullWidth sx={{ marginY: 2 }}>
         <InputLabel id="filename-label">Selectionner l&apos;extension</InputLabel>
         <Select labelId="filename-label" value={filename} label="Filename" onChange={handleChange}>
-          {dbfiles.map((filename, idx) => (
-            <MenuItem key={filename} value={filename}>
-              {dbextension[idx]}
-            </MenuItem>
-          ))}
+          {dbfiles
+            .map((filename, idx) => ({ filename, extension: dbextension[idx] }))
+            .toSorted((a, b) => a.extension.localeCompare(b.extension))
+            .map(({ filename, extension }) => (
+              <MenuItem key={filename} value={filename}>
+                {extension}
+              </MenuItem>
+            ))}
         </Select>
       </FormControl>
       <Grid container justifyContent="center" spacing={1}>
@@ -76,7 +79,7 @@ const HomeActivity = () => {
         ))}
       </Grid>
       <Modal open={card !== undefined} onClose={handleClose}>
-        <Box>
+        <Box sx={{ margin: "auto", width: "90%" }}>
           <Box sx={{ alignContent: "right" }}>
             <IconButton aria-label="close" size="small" onClick={handleClose}>
               <CloseIcon fontSize="inherit" />
