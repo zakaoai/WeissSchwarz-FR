@@ -4,5 +4,6 @@
       "src": "/[^.]+",
       "dest": "/"
     }
-  ]
+  ],
+  "packageManager": "yarn@4.1.1"
 }
