@@ -54,7 +54,7 @@ const useHomeActivity = () => {
   )
 
   const handleChangeRarity = useCallback(
-    (event: SelectChangeEvent) => {
+    (event: SelectChangeEvent<string[]>) => {
       const {
         target: { value }
       } = event

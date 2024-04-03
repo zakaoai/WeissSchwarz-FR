@@ -51,7 +51,7 @@ const Filter = ({
             value={rarity}
             onChange={handleChangeRarity}
             input={<OutlinedInput id="select-multiple-chip" label="Chip" />}
-            renderValue={selected => (
+            renderValue={(selected: string[]) => (
               <Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.5 }}>
                 {selected.map(value => (
                   <Chip key={value} label={value} />
