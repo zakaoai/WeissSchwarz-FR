@@ -7,11 +7,11 @@ import { useCallback, useMemo, useState } from "react"
 
 const useHomeActivity = () => {
   const [cards, setCards] = useState<Card[]>(Array<Card>(0))
-  const [card, setCard] = useState<Card | undefined>(undefined)
+
   const [rarity, setRarity] = useState<string[]>(Array<string>(0))
 
   const [filename, setFilename] = useState("")
-
+  const [card, setCard] = useState<Card | undefined>(undefined)
   const handleModalClose = useCallback(() => {
     setCard(undefined)
   }, [setCard])

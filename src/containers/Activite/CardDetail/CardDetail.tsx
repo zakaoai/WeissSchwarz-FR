@@ -1,4 +1,4 @@
-import translation from "@/constants/translation"
+import frenchTranslation from "@/constants/frenchTranslation"
 import Card from "@/interfaces/DB/Card"
 import Paper from "@mui/material/Paper"
 import Table from "@mui/material/Table"
@@ -31,7 +31,7 @@ const CardDetail = ({ card }: { card: Card }) => {
           </TableRow>
           <TableRow>
             <TableCell colSpan={2}>
-              {(translation[card.code] || card.ability).map((ability, idx) => (
+              {(frenchTranslation[card.code] || card.ability).map((ability, idx) => (
                 <p key={`${card.code}-${idx}`}>{ability}</p>
               ))}
             </TableCell>

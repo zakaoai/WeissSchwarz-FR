@@ -5,6 +5,10 @@ const SiteMap: ISiteMap = {
     path: "/app/home",
     label: "Accueil"
   },
+  DECK: {
+    path: "/app/deck",
+    label: "Deck"
+  },
   REGLE: {
     path: "/app/regle",
     label: "Règles"

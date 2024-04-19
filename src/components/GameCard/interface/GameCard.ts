@@ -1,6 +1,6 @@
-import Card from "@/interfaces/DB/Card"
+import DeckCard from "@/interfaces/containers/Deck/DeckCard"
 
 export default interface GameCard {
-  card: Card
-  onClick: (card: Card) => void
+  card: DeckCard
+  onClick: (card: DeckCard) => void
 }
