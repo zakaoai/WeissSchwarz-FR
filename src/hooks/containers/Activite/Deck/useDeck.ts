@@ -3,7 +3,7 @@ import Card from "@/interfaces/DB/Card"
 import { useCallback, useState } from "react"
 
 const useDeck = () => {
-  const { deck, setDeck } = useAppContext()
+  const { deck } = useAppContext()
 
   const [card, setCard] = useState<Card | undefined>(undefined)
   const handleModalClose = useCallback(() => {

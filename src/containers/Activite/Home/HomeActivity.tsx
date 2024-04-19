@@ -1,10 +1,12 @@
 import GameCard from "@/components/GameCard/GameCard"
 import useHomeActivity from "@/hooks/containers/Activite/Home/useHomeActivity"
+import Card from "@/interfaces/DB/Card"
 import CloseIcon from "@mui/icons-material/Close"
 import { Grid } from "@mui/material"
 import Box from "@mui/material/Box"
 import IconButton from "@mui/material/IconButton"
 import Modal from "@mui/material/Modal"
+import { useEffect } from "react"
 import CardDetail from "../CardDetail/CardDetail"
 import Filter from "./Filter"
 /**
@@ -23,6 +25,22 @@ const HomeActivity = () => {
     raritys,
     handleClearRarity
   } = useHomeActivity()
+
+  useEffect(() => {
+    fetch("/LRC_W105.json")
+      .then(resp => resp.json())
+      .then(data =>
+        (data as Card[]).reduce(
+          (prev, curr) => {
+            prev[curr.code] = curr.ability
+            return prev
+          },
+          {} as { [key: string]: string[] }
+        )
+      )
+
+      .then(datas => console.log(JSON.stringify(datas)))
+  }, [])
 
   return (
     <>
