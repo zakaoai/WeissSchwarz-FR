@@ -44,7 +44,7 @@ const frenchTranslation = {
   ],
   "ATLA/WX04-T12": [
     "【CONT】 Si tout vos personnage sont de 《World of Avatar》, cette carte gagne +1000 de puissance.",
-    "【AUTO】 [(1) Poser 1 carte de votre main à votre waiting room] Quand cette carte est placé sur le stage depuis votre main, vous pouvez payer le coût. Si vous le faite, chercher dans votre deck to 1 personnage de《World of Avatar》, révélé le à votre adversaire, poser là dans votre main, et mélanger votre deck."
+    "【AUTO】 [(1) Poser 1 carte de votre main à votre waiting room] Quand cette carte est placé sur le stage depuis votre main, vous pouvez payer le coût. Si vous le faite, chercher dans votre deck jusqu'à 1 personnage de《World of Avatar》, révélé le à votre adversaire, poser là dans votre main, et mélanger votre deck."
   ],
   "ATLA/WX04-T13": [
     "【AUTO】 Quand votre climax est placé dans la zone climax, choisissez 1 de vos personnages, et ce personnage gagnera +1 soul jusqu'à la fin du tour.",
