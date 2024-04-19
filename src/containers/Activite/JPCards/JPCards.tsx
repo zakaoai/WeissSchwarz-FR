@@ -1,18 +1,18 @@
 import GameCard from "@/components/GameCard/GameCard"
-import dbextension from "@/constants/dbextension"
-import dbfiles from "@/constants/dbfiles"
-import useHomeActivity from "@/hooks/containers/Activite/Home/useHomeActivity"
+import { jpExtension, jpFileNames } from "@/constants/jp"
+import useJPCards from "@/hooks/containers/Activite/JPCards/useJPCards"
 import CloseIcon from "@mui/icons-material/Close"
 import { Grid } from "@mui/material"
 import Box from "@mui/material/Box"
 import IconButton from "@mui/material/IconButton"
 import Modal from "@mui/material/Modal"
 import CardDetail from "../CardDetail/CardDetail"
-import Filter from "./Filter"
+import Filter from "../Home/Filter"
+
 /**
  * Activité d'accueil du projet
  */
-const HomeActivity = () => {
+const JPCards = () => {
   const {
     handleChangeFileName,
     filename,
@@ -24,11 +24,11 @@ const HomeActivity = () => {
     handleChangeRarity,
     raritys,
     handleClearRarity
-  } = useHomeActivity()
+  } = useJPCards()
 
   return (
     <>
-      Bienvenue dans cette application de visualisation de carte WeissSchwarz en Français <br />
+      Dans cette sections vous retrouverez toute les cartes Japonnaises répertorié <br />
       <Filter
         handleChangeExtension={handleChangeFileName}
         filename={filename}
@@ -36,8 +36,8 @@ const HomeActivity = () => {
         handleChangeRarity={handleChangeRarity}
         raritys={raritys}
         handleClearRarity={handleClearRarity}
-        files={dbfiles}
-        extensions={dbextension}
+        files={jpFileNames}
+        extensions={jpExtension}
       />
       <Grid container justifyContent="center" spacing={1}>
         {cards.map(card => (
@@ -57,4 +57,4 @@ const HomeActivity = () => {
     </>
   )
 }
-export default HomeActivity
+export default JPCards

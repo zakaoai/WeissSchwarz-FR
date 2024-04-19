@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react"
 import path from "path"
 import DynamicPublicDirectory from "vite-multiple-assets"
 
-const dirAssets = ["public", "DB"]
+const dirAssets = ["public", "DB", "JP-DB"]
 
 import { defineConfig } from "vite"
 import eslint from "vite-plugin-eslint"

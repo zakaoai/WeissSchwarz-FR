@@ -7,4 +7,6 @@ export default interface Filter {
   rarity: string[]
   raritys: Set<string>
   handleClearRarity: () => void
+  files: string[]
+  extensions: string[]
 }

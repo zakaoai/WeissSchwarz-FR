@@ -1,5 +1,3 @@
-import dbextension from "@/constants/dbextension"
-import dbfiles from "@/constants/dbfiles"
 import IFilter from "@/interfaces/containers/Activite/Home/Filter"
 import ClearIcon from "@mui/icons-material/Clear"
 import { IconButton } from "@mui/material"
@@ -19,15 +17,17 @@ const Filter = ({
   handleChangeRarity,
   rarity,
   raritys,
-  handleClearRarity
+  handleClearRarity,
+  files,
+  extensions
 }: IFilter) => {
   return (
     <>
       <FormControl fullWidth sx={{ marginY: 2 }}>
         <InputLabel id="filename-label">Selectionner l&apos;extension</InputLabel>
         <Select labelId="filename-label" value={filename} label="Filename" onChange={handleChangeExtension}>
-          {dbfiles
-            .map((filename, idx) => ({ filename, extension: dbextension[idx] }))
+          {files
+            .map((filename, idx) => ({ filename, extension: extensions[idx] }))
             .toSorted((a, b) => a.extension.localeCompare(b.extension))
             .map(({ filename, extension }) => (
               <MenuItem key={filename} value={filename}>

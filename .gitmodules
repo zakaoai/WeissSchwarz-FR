@@ -1,0 +1,3 @@
+[submodule "JP-DB"]
+	path = JP-DB
+	url = https://github.com/CCondeluci/WeissSchwarz-JP-DB.git
