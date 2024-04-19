@@ -120,6 +120,7 @@ const dbextension = [
   "Tokyo Revengers",
   "That Time I Got Reincarnated as a Slime Vol.3",
   "That Time I Got Reincarnated as a Slime",
-  "That Time I Got Reincarnated as a Slime Vol.2"
+  "That Time I Got Reincarnated as a Slime Vol.2",
+  "Lycoris Recoil"
 ]
 export default dbextension

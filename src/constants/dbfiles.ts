@@ -120,7 +120,8 @@ const dbfiles = [
   "TRV_S92.json",
   "TSK_S101.json",
   "TSK_S70.json",
-  "TSK_S82.json"
+  "TSK_S82.json",
+  "LRC_W105.json"
 ]
 
 export default dbfiles
