@@ -86,7 +86,7 @@ const frenchTranslation = {
   ],
   "SPY/S106-TE05": [
     "【CONT】 Si vous avez 2 ou plus personnages《Berlint》 , cette carte gagne +1000 de puissance.",
-    '【AUTO】 【CXCOMBO】 Au début de votre encore step, si "Fun Times" est dans votre climax area, cette carte est dans votre center stage, vous avez 2 ou plus personnages《Berlint》, et qu\'il n\'y a pas de personnage en face de cette carte ou le personnage en face est 【REVERSE】, chercher dans votre deck 1 personnage 《Berlint》, révélez le à votre adversaire, metter le dans votre main, et mélanger votre deck.'
+    "【AUTO】 【CXCOMBO】 Au début de votre encore step, si \"Fun Times\" est dans votre climax area, cette carte est dans votre center stage, vous avez 2 ou plus personnages《Berlint》, et qu'il n'y a pas de personnage en face de cette carte ou le personnage en face est 【REVERSE】, chercher dans votre deck 1 personnage 《Berlint》, révélez le à votre adversaire, metter le dans votre main, et mélanger votre deck."
   ],
   "SPY/S106-TE06": ["-"],
   "SPY/S106-TE07": [
