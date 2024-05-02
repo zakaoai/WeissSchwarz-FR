@@ -44,7 +44,7 @@ const frenchTranslation = {
   ],
   "ATLA/WX04-T12": [
     "【CONT】 Si tout vos personnage sont de 《World of Avatar》, cette carte gagne +1000 de puissance.",
-    "【AUTO】 [(1) Poser 1 carte de votre main à votre waiting room] Quand cette carte est placé sur le stage depuis votre main, vous pouvez payer le coût. Si vous le faite, chercher dans votre deck jusqu'à 1 personnage de《World of Avatar》, révélé le à votre adversaire, poser là dans votre main, et mélanger votre deck."
+    "【AUTO】 [(1) Poser 1 carte de votre main à votre waiting room] Quand cette carte est placé sur le stage depuis votre main, vous pouvez payer le coût. Si vous le faite, chercher dans votre deck to 1 personnage de《World of Avatar》, révélé le à votre adversaire, poser là dans votre main, et mélanger votre deck."
   ],
   "ATLA/WX04-T13": [
     "【AUTO】 Quand votre climax est placé dans la zone climax, choisissez 1 de vos personnages, et ce personnage gagnera +1 soul jusqu'à la fin du tour.",
@@ -69,7 +69,80 @@ const frenchTranslation = {
   "ATLA/WX04-T19": [
     "【CONT】 Tout vos personnage gagne +1000 de puissance et +1 soul.",
     "(【GATE】: Quand cette carte triggers, vous pouvez choisir 1 climax dans votre waiting room, et la retourner dans votre main)"
-  ]
+  ],
+  "SPY/S106-TE01": [
+    '【CONT】 Tout vos autres "Promise, Anya" gagne +1500 de puissance et "【AUTO】 Encore [Mettre 1 personnage de votre main dans la waiting room]".',
+    '【AUTO】 Bond/"Promise, Anya" [Mettre 1 carte de votre main dans la waiting room] (Quand cette carte est joué et placé sur le stage, vous pouvez payer le coût. Si vous le faites, choisissez 1 "Promise, Anya" dans votre waiting room, et retournez la dans votre main)'
+  ],
+  "SPY/S106-TE02": [
+    "【CONT】 Tous vos autres personnages《Berlint》gagne +500 de puissance.",
+    "【AUTO】 Quand cette carte ou vos autres personnages《Berlint》 est placé sur le stage depuis votre main, vous pouvez regarder la plus haute carte de votre deck. (Remettez la cartes que vous avez vu à sa place d'origine)"
+  ],
+  "SPY/S106-TE03": [
+    "【AUTO】 Au début de la phase d'attaque de votre adversaire, vous pouvez bouger cette carte à une place libre de votre center stage."
+  ],
+  "SPY/S106-TE04": [
+    "【AUTO】 Quand cette carte deviens【REVERSE】 en combat, vous pouvez révéler les 3 premières cartes de votre deck. Si vous révélé 1 cartes ou plus, choisissez jusqu'à 1 personnage《Berlint》 parmis celle-ci, mettez la dans votre main, mettez les autres cartes dans la waiting room, choississez 1 carte de votre main, et mettez la dans votre waiting room."
+  ],
+  "SPY/S106-TE05": [
+    "【CONT】 Si vous avez 2 ou plus personnages《Berlint》 , cette carte gagne +1000 de puissance.",
+    '【AUTO】 【CXCOMBO】 Au début de votre encore step, si "Fun Times" est dans votre climax area, cette carte est dans votre center stage, vous avez 2 ou plus personnages《Berlint》, et qu\'il n\'y a pas de personnage en face de cette carte ou le personnage en face est 【REVERSE】, chercher dans votre deck 1 personnage 《Berlint》, révélez le à votre adversaire, metter le dans votre main, et mélanger votre deck.'
+  ],
+  "SPY/S106-TE06": ["-"],
+  "SPY/S106-TE07": [
+    '【CONT】 Si vous avez 2 ou plus personnages 《Berlint》, cette cartes gagne +2500 de puissance et gagne "【AUTO】 Encore [ Mettez 1 personnage《Berlint》 de votre main à votre waiting room]".',
+    "【AUTO】 Quand cette carte est place sur le stage depuis votre main, tirez 1 cartes, choisissez 1 carte de votre main, mettez la dans votre waiting room, choissisez 1 personnage de votre adversaire, retournez le dans sa main."
+  ],
+  "SPY/S106-TE08": [
+    "Mettez les 4 premières carte de votre deck dans votre waiting room, choisissez 1 personnage de niveau X ou moins 《Berlint》 de votre waiting room, et retournez la dans votre main. X est égal au nombre total de【SOUL】parmis ces cartes."
+  ],
+  "SPY/S106-TE09": [
+    "【CONT】 Tous vos personnages gagne +1000 de puissance et +1 soul.",
+    "(【CHOICE】: Quand cette carte triggers, vous pouvez choisir un personnage avec 【SOUL】 dans son icone de trigger de votre waiting room, et retournez le dans votre main ou mettez la dans votre stock)"
+  ],
+  "SPY/S106-TE10": [
+    "【ACT】 [(1)] Tirez 1 carte, choissisez 1 carte de votre main, et posez le dans votre waiting room.",
+    "【ACT】 Brainstorm [(1) 【REST】 cette carte] Retournez 5 cartes de dessus de votre deck, et mettez les dans votres waiting room. Pour chaque climax révélé parmis ces cartes, tiré 1 carte."
+  ],
+  "SPY/S106-TE11": [
+    "【AUTO】 Quand cette cartes est placé dans votre stage depuis votre main, si votre adversaire possède 1 personnages ou moins dans son center stage, vous pouvez choisir 1 personnage de coût 0 ou moins dans le center stage de votre adversaire, et mettez le en bas de leur deck.",
+    "【AUTO】 Quand cette carte attaque, choisissez 1 autre personnage《Berlint》, et ce personnage gagne +X de puissance jusqu'à la fin du tour. X est égale au nombre d'autres personnage 《Berlint》que vous avez ×500."
+  ],
+  "SPY/S106-TE12": [
+    '【CONT】 Si tous vos personnage sont《Berlint》, cette carte gagne +1500 de puissance et la capacité suivante. "【AUTO】 Quand la carte opposante deviens【REVERSE】, choisissez 1 personnage《Berlint》 dans votre waiting room, retournez le dans votre main, choisissez 1 carte de votre main, et mettez la dans votre waiting room."'
+  ],
+  "SPY/S106-TE13": [
+    "【AUTO】 [(1) Mettez 1 carte de votre main dans votre waiting room] Quand cette carte est placé sur le stage depuis votre main, vous pouvez payer le coût. Si vous le faites, chercher dans votre deck 1 personnage《Berlint》, révélé le à votre adversaire, metter le dans votre main, et melangez votre deck."
+  ],
+  "SPY/S106-TE14": [
+    "【AUTO】 Quand cette carte est placé sur le stage depuis votre main, révélez la carte du dessus de votre deck. Si cette carte est un personnage《Berlint》, choisissez 1 de vos personnages, et ce personnage gagnera +2000 de puissance jusqu'à la fin du tour. (Retournez la carte révélé à sa place d'origine)",
+    "【AUTO】 Quand cette carte deviens【REVERSE】, si la carte qui l'oppose coute 0 ou moins, vous pouvez mettre la première carte de la clock de votre adversaire dans sa waiting room. Si vous le faites, mettez cette carte dans la clock de votre adverssaire."
+  ],
+  "SPY/S106-TE15": [
+    "【AUTO】 Quand cette carte est placé sur le stage depuis votre main, regardez jusqu'à 2 cartes depuis le dessus du deck de votre adversaire, et mettez les sur le dessus de son deck à leur ordre d'origine.",
+    "【AUTO】 [Mettez 1 carte de votre main dans votre waiting room] Quand cette carte est placé sur le stage depuis votre main, vous pouvez payer le coût. Si vous le faites, choisissez un personnage de niveau 0 ou moins dans votre waiting room, et posez le dans n'importe quel position dans votre stage."
+  ],
+  "SPY/S106-TE16": [
+    '【AUTO】 Quand vous utiliez le "Backup" de cette carte, si tous vos personnage sont《Berlint》, vous pouvez mettre la carte du dessus de votre deck dans votre stock.',
+    "【ACT】 【COUNTER】 Backup 2000, Niveau 1 [(1) Mettez cette carte de votre main dans votre waiting room] (Choisissez 1 de vos personnages qui subit une attaque frontal, et cette carte gagne +2000 de puissance jusqu'à la fin du tour)"
+  ],
+  "SPY/S106-TE17": [
+    "【CONT】 Assist Tous les personnage devans cette carte gagne +X de puissance. X est égale au niveau du personnage ×500.",
+    '【ACT】 [【REST】cette carte] Regarder la première carte de votre deck, mettez la sur le dessus de votre deck ou dans votre waiting room, et tous vos autre "Fake Family, Loid & Anya & Yor" gagne +1000 de puissance et la capacité suivante jusqu\'à la fin du tour. "【CONT】 Pendant le combat de cette carte, votre adversaire ne peut pas jouer "Backup" depuis sa main."'
+  ],
+  "SPY/S106-TE18": [
+    "【AUTO】 Quand cette carte attaque, cette carte gagne +X de puissance jusqu'à la fin du tour. X  est égale au nombre de vos autres personnages《Berlint》 que vous possedez ×1000.",
+    "【AUTO】 Encore [Mettez 1 personnage 《Berlint》 de votre main à la waiting room] (Quand cette carte est posé dans votre waiting room depuis votre stage, vous pouvez payer le coût. Si vous le faitesn retournez cette carte à sa précédente place sur le stage en position【REST】)"
+  ],
+  "SPY/S106-TE19": [
+    "【AUTO】 Quand cette carte est placé sur le stage depuis votre main, vous pouvez mettre la plus haute carte de votre clock dans votre waiting room.",
+    '【AUTO】【CXCOMBO】 [(1) Mettez 1 personnage de votre main dans votre waiting room] Quand cette carte attaque, si "Family Full of Secrets" est dans votre climax area, et que vous avez 2 ou plus personnages 《Berlint》, vous pouvez payer le coût. Si vous le faites, réalisez 3 dégat à votre adversaire. (Les dégats peuvent être annulé)'
+  ],
+  "SPY/S106-TE20": [
+    "【CONT】 Tous vos personnage gagne +1000 de puissance et +1 soul.",
+    "(【TREASURE】: Quand cette carte triggers, retournez cette carte dans votre main. Vous pouvez mettre la première carte de votre deck dans votre stock)"
+  ],
+  "SPY/S106-TE21": ["【CONT】 Tous vos personnages gagne +2 soul."]
 } as { [key: string]: string[] }
 
 export default frenchTranslation
