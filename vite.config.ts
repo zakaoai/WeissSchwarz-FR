@@ -20,7 +20,7 @@ const getJsonDB = (path: string) =>
   })
 
 const assetJSON = [
-  { output: "indexEN.json", data: getJsonDB("./DB") },
+  { output: "indexEN.json", data: getJsonDB("./EN-DB/DB") },
   { output: "indexJP.json", data: getJsonDB("./JP-DB/DB") }
 ]
 

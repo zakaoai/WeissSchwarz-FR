@@ -2,3 +2,7 @@
 	path = JP-DB
 	url = https://github.com/CCondeluci/WeissSchwarz-JP-DB.git
 	branch = main
+[submodule "EN-DB"]
+	path = EN-DB
+	url = https://github.com/CCondeluci/WeissSchwarz-ENG-DB.git
+	branch = master
