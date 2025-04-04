@@ -1,3 +1,4 @@
+import CardFileInfo from "@/interfaces/DB/CardFileInfo"
 import { SelectChangeEvent } from "@mui/material"
 
 export default interface Filter {
@@ -9,4 +10,5 @@ export default interface Filter {
   handleClearRarity: () => void
   files: string[]
   extensions: string[]
+  filesIndex?: CardFileInfo[]
 }

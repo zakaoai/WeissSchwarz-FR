@@ -18,16 +18,15 @@ const Filter = ({
   rarity,
   raritys,
   handleClearRarity,
-  files,
-  extensions
+  filesIndex
 }: IFilter) => {
   return (
     <>
       <FormControl fullWidth sx={{ marginY: 2 }}>
         <InputLabel id="filename-label">Selectionner l&apos;extension</InputLabel>
         <Select labelId="filename-label" value={filename} label="Filename" onChange={handleChangeExtension}>
-          {files
-            .map((filename, idx) => ({ filename, extension: extensions[idx] }))
+          {(filesIndex ?? [])
+            .map(({ file, name }) => ({ filename: file, extension: name }))
             .toSorted((a, b) => a.extension.localeCompare(b.extension))
             .map(({ filename, extension }) => (
               <MenuItem key={filename} value={filename}>

@@ -2,7 +2,7 @@ import Card from "@/interfaces/DB/Card"
 import ResponseError from "@/interfaces/services/ResponseError"
 import CardService from "@/services/CardsService"
 import { SelectChangeEvent } from "@mui/material/Select"
-import { useMutation } from "@tanstack/react-query"
+import { useMutation, useQuery } from "@tanstack/react-query"
 import { useCallback, useMemo, useState } from "react"
 
 const useJPCards = () => {
@@ -74,6 +74,10 @@ const useJPCards = () => {
 
   const filteredCards = cards.filter(card => (rarity.length > 0 ? rarity.includes(card.rarity) : true))
 
+  const getCardIndexCall = useCallback(() => CardService.getCardJPIndex(), [])
+
+  const { data: cardIndex } = useQuery({ queryKey: ["EN-Index"], queryFn: getCardIndexCall })
+
   return {
     handleChangeFileName,
     filename,
@@ -84,7 +88,8 @@ const useJPCards = () => {
     rarity,
     handleChangeRarity,
     raritys,
-    handleClearRarity
+    handleClearRarity,
+    cardIndex
   }
 }
 

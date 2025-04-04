@@ -23,7 +23,8 @@ const HomeActivity = () => {
     rarity,
     handleChangeRarity,
     raritys,
-    handleClearRarity
+    handleClearRarity,
+    cardIndex
   } = useHomeActivity()
 
   return (
@@ -38,6 +39,7 @@ const HomeActivity = () => {
         handleClearRarity={handleClearRarity}
         files={dbfiles}
         extensions={dbextension}
+        filesIndex={cardIndex}
       />
       <Grid container justifyContent="center" spacing={1}>
         {cards.map(card => (

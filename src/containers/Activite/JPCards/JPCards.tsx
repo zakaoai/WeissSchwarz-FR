@@ -23,7 +23,8 @@ const JPCards = () => {
     rarity,
     handleChangeRarity,
     raritys,
-    handleClearRarity
+    handleClearRarity,
+    cardIndex
   } = useJPCards()
 
   return (
@@ -38,6 +39,7 @@ const JPCards = () => {
         handleClearRarity={handleClearRarity}
         files={jpFileNames}
         extensions={jpExtension}
+        filesIndex={cardIndex}
       />
       <Grid container justifyContent="center" spacing={1}>
         {cards.map(card => (
