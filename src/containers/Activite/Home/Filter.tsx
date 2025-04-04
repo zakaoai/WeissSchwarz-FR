@@ -26,6 +26,7 @@ const Filter = ({
         <InputLabel id="filename-label">Selectionner l&apos;extension</InputLabel>
         <Select labelId="filename-label" value={filename} label="Filename" onChange={handleChangeExtension}>
           {(filesIndex ?? [])
+            .filter(a => a !== null)
             .map(({ file, name }) => ({ filename: file, extension: name }))
             .toSorted((a, b) => a.extension.localeCompare(b.extension))
             .map(({ filename, extension }) => (

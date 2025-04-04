@@ -20,8 +20,8 @@ const getJsonDB = (path: string) =>
   })
 
 const assetJSON = [
-  { output: "./EN/index.json", data: getJsonDB("./DB") },
-  { output: "./JP/index.json", data: getJsonDB("./JP-DB/DB") }
+  { output: "indexEN.json", data: getJsonDB("./DB") },
+  { output: "indexJP.json", data: getJsonDB("./JP-DB/DB") }
 ]
 
 import { defineConfig } from "vite"
@@ -32,6 +32,9 @@ import { nodePolyfills } from "vite-plugin-node-polyfills"
 export default defineConfig(
   // _env =>
   {
+    server: {
+      host: true
+    },
     plugins: [
       generateFile(assetJSON),
       DynamicPublicDirectory(dirAssets),

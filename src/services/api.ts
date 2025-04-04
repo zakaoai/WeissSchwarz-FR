@@ -1,6 +1,6 @@
 const api = {
-  cardIndex: "/EN/index.json",
-  cardJPIndex: "/JP/index.json",
+  cardIndex: "/indexEN.json",
+  cardJPIndex: "/indexJP.json",
   cardJson: (filename: string) => `/EN/${filename}`,
   jpCardJson: (filename: string) => `/JP/${filename}`
 }
