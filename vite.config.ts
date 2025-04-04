@@ -5,7 +5,11 @@ import path from "path"
 import DynamicPublicDirectory from "vite-multiple-assets"
 import generateFile from "vite-plugin-generate-file"
 
-const dirAssets = ["public/**", { input: "DB/*.json", output: "/EN" }, { input: "JP-DB/DB/*.json", output: "/JP" }]
+const dirAssets = [
+  "public/**",
+  { input: "EN-DB/DB/*.json", output: "/EN" },
+  { input: "JP-DB/DB/*.json", output: "/JP" }
+]
 
 const getJsonDB = (path: string) =>
   fs.readdirSync(path, { withFileTypes: true }).map(({ name }) => {
