@@ -1,3 +1,4 @@
+import useAppContext from "@/hooks/context/useAppContext"
 import Card from "@/interfaces/DB/Card"
 import ResponseError from "@/interfaces/services/ResponseError"
 import CardService from "@/services/CardsService"
@@ -78,6 +79,52 @@ const useJPCards = () => {
 
   const { data: cardIndex } = useQuery({ queryKey: ["EN-Index"], queryFn: getCardIndexCall })
 
+  const { decks, setDecks } = useAppContext()
+
+  const [deckList, setDeckList] = useState<string[]>(["deck", "collection"])
+  const [currentDeck, setCurrentDeck] = useState<string>("deck")
+
+  const isAdded = useCallback(
+    (card: Card) => decks[currentDeck]?.jp?.[filename]?.some(a => a.code === card.code),
+    [decks, currentDeck, filename]
+  )
+
+  const onAdd = useCallback(
+    (card: Card) => {
+      if (isAdded(card)) {
+        setDecks(curr => ({
+          ...curr,
+          [currentDeck]: {
+            ...curr[currentDeck],
+            jp: {
+              ...curr[currentDeck]?.jp,
+              [filename]: curr[currentDeck]?.jp?.[filename]?.filter(a => a.code !== card.code)
+            }
+          }
+        }))
+      } else {
+        setDecks(curr => ({
+          ...curr,
+          [currentDeck]: {
+            ...curr[currentDeck],
+            jp: {
+              ...curr[currentDeck]?.jp,
+              [filename]: [...(curr[currentDeck]?.jp?.[filename] ?? []), { code: card.code }]
+            }
+          }
+        }))
+      }
+    },
+    [setDecks, filename, currentDeck]
+  )
+
+  const handleChangeDeckList = useCallback(
+    (event: SelectChangeEvent) => {
+      setCurrentDeck(event.target.value)
+    },
+    [setCurrentDeck]
+  )
+
   return {
     handleChangeFileName,
     filename,
@@ -89,7 +136,12 @@ const useJPCards = () => {
     handleChangeRarity,
     raritys,
     handleClearRarity,
-    cardIndex
+    cardIndex,
+    isAdded,
+    onAdd,
+    deckList,
+    currentDeck,
+    handleChangeDeckList
   }
 }
 

@@ -1,12 +1,12 @@
 import { useLocalStorage } from "@/hooks/utils/useLocalStorage"
-import Card from "@/interfaces/DB/Card"
+import Deck from "@/interfaces/containers/Deck/Deck"
 import { useMemo, type PropsWithChildren } from "react"
 import AppContext from "./AppContext"
 
 const AppProvider = ({ children }: PropsWithChildren) => {
-  const [deck, setDeck] = useLocalStorage<Record<string, Card>>("deck", {})
+  const [decks, setDecks] = useLocalStorage<Record<string, Deck>>("decks", {})
 
-  const contextValue = useMemo(() => ({ deck, setDeck }), [deck, setDeck])
+  const contextValue = useMemo(() => ({ decks, setDecks }), [decks, setDecks])
 
   return <AppContext.Provider value={contextValue}>{children}</AppContext.Provider>
 }

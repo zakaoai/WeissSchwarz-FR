@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from "react"
-import Card from "../DB/Card"
+import Deck from "../containers/Deck/Deck"
 
 export default interface AppContext {
-  deck: Record<string, Card>
-  setDeck: Dispatch<SetStateAction<Record<string, Card>>>
+  decks: Record<string, Deck>
+  setDecks: Dispatch<SetStateAction<Record<string, Deck>>>
 }

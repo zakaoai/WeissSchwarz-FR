@@ -3,7 +3,7 @@ import dbextension from "@/constants/dbextension"
 import dbfiles from "@/constants/dbfiles"
 import useHomeActivity from "@/hooks/containers/Activite/Home/useHomeActivity"
 import CloseIcon from "@mui/icons-material/Close"
-import { Grid } from "@mui/material"
+import { FormControl, Grid, InputLabel, MenuItem, Select } from "@mui/material"
 import Box from "@mui/material/Box"
 import IconButton from "@mui/material/IconButton"
 import Modal from "@mui/material/Modal"
@@ -24,12 +24,29 @@ const HomeActivity = () => {
     handleChangeRarity,
     raritys,
     handleClearRarity,
-    cardIndex
+    cardIndex,
+    isAdded,
+    onAdd,
+    deckList,
+    currentDeck,
+    handleChangeDeckList
   } = useHomeActivity()
 
   return (
     <>
       Bienvenue dans cette application de visualisation de carte WeissSchwarz en Français <br />
+      <FormControl fullWidth sx={{ marginY: 2 }}>
+        <InputLabel id="deck-label">Selectionner votre deck</InputLabel>
+        <Select labelId="deck-label" value={currentDeck} label="Deck" onChange={handleChangeDeckList}>
+          {deckList
+            .toSorted((a, b) => a.localeCompare(b))
+            .map(a => (
+              <MenuItem key={a} value={a}>
+                {a}
+              </MenuItem>
+            ))}
+        </Select>
+      </FormControl>
       <Filter
         handleChangeExtension={handleChangeFileName}
         filename={filename}
@@ -43,7 +60,7 @@ const HomeActivity = () => {
       />
       <Grid container justifyContent="center" spacing={1}>
         {cards.map(card => (
-          <GameCard key={card.code} card={card} onClick={onClickCard} />
+          <GameCard key={card.code} card={card} onClick={onClickCard} isAdded={isAdded(card)} onAdd={onAdd} />
         ))}
       </Grid>
       <Modal open={card !== undefined} onClose={handleModalClose} sx={{ overflow: "scroll" }}>
