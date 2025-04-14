@@ -81,7 +81,7 @@ const useHomeActivity = () => {
 
   const { decks, setDecks } = useAppContext()
 
-  const [deckList, setDeckList] = useState<string[]>(["deck", "collection"])
+  const [deckList] = useState<string[]>(["deck", "collection"])
   const [currentDeck, setCurrentDeck] = useState<string>("deck")
 
   const isAdded = useCallback(

@@ -8,7 +8,7 @@ import { useCallback, useEffect, useMemo, useState } from "react"
 
 const useDeck = () => {
   const { decks, setDecks } = useAppContext()
-  const [deckList, setdeckList] = useState(Object.keys(decks))
+  const [deckList] = useState(Object.keys(decks))
   const [currentDeck, setCurrentDeck] = useState(deckList[0])
 
   const deck = useMemo(
