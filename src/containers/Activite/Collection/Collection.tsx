@@ -148,6 +148,7 @@ const Collection = () => {
 
   return (
     <>
+      <Typography>Vos collections Anglaise et Japonaise se retrouveront listé ici. Pour les alimenter, selectionnez le deck "Collection" dans l'onglet "Accueil" ou "JP Cards" et ajouter vos cartes</Typography>
       {collectionsEN.length > 0 && (
         <>
           <Typography>English Edition</Typography>
