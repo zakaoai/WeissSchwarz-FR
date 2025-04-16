@@ -7,7 +7,14 @@ import MenuMobile from "./MenuMobile/MenuMobile"
  * Menu de l'application
  */
 const Menu = () => {
-  const links = [SiteMap.ACCUEIL, SiteMap.DECK, SiteMap.JPCARDS, SiteMap.REGLE, SiteMap.REMERCIEMENT]
+  const links = [
+    SiteMap.ACCUEIL,
+    SiteMap.DECK,
+    SiteMap.JPCARDS,
+    SiteMap.COLLECTION,
+    SiteMap.REGLE,
+    SiteMap.REMERCIEMENT
+  ]
 
   return (
     <>

@@ -13,6 +13,10 @@ const SiteMap: ISiteMap = {
     path: "/app/deck",
     label: "Deck"
   },
+  COLLECTION: {
+    path: "/app/collection",
+    label: "Collection"
+  },
   REGLE: {
     path: "/app/regle",
     label: "Règles"
