@@ -48,7 +48,6 @@ const useDeck = () => {
   const onSuccessGetCardsJP = useCallback(
     (cards: Card[], filename: string) => {
       setJpCollection(curr => ({ ...curr, [filename]: cards }))
-      console.log(enCollection)
     },
     [setJpCollection]
   )

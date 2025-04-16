@@ -40,13 +40,13 @@ const Collection = () => {
             .reduce(reducerRarity, {})
         ])
       ),
-    [collectionsEN]
+    [collectionsEN, enCollection]
   )
 
   const collectionsJpStats = useMemo(
     () =>
       Object.fromEntries(
-        collectionsEN.map(([code, cards]) => [
+        collectionsJP.map(([code, cards]) => [
           code,
           cards
             .map(a => jpCollection[code]?.find(c => c.code === a.code))
@@ -54,7 +54,7 @@ const Collection = () => {
             .reduce(reducerRarity, {})
         ])
       ),
-    [jpCollection]
+    [collectionsJP, jpCollection]
   )
 
   const enCollectionStats = useMemo(
@@ -68,8 +68,6 @@ const Collection = () => {
       Object.fromEntries(Object.entries(jpCollection).map(([code, cards]) => [code, cards.reduce(reducerRarity, {})])),
     [enCollection]
   )
-
-  console.log("🚀 ~ Collection ~ enCollectionStats:", enCollectionStats)
 
   const getCardsCall = useCallback((cardsFilename: string) => CardService.getCards(cardsFilename), [])
   const onSuccessGetCards = useCallback(
@@ -148,7 +146,10 @@ const Collection = () => {
 
   return (
     <>
-      <Typography>Vos collections Anglaise et Japonaise se retrouveront listé ici. Pour les alimenter, selectionnez le deck "Collection" dans l'onglet "Accueil" ou "JP Cards" et ajouter vos cartes</Typography>
+      <Typography>
+        Vos collections Anglaise et Japonaise se retrouveront listé ici. Pour les alimenter, selectionnez le deck
+        "Collection" dans l'onglet "Accueil" ou "JP Cards" et ajouter vos cartes
+      </Typography>
       {collectionsEN.length > 0 && (
         <>
           <Typography>English Edition</Typography>
