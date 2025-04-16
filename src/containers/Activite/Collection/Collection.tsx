@@ -11,11 +11,11 @@ const Collection = () => {
   const { decks } = useAppContext()
 
   const collectionsEN = useMemo(
-    () => Object.entries(decks.collection.en ?? {}).filter(([, cards]) => cards.length > 0),
+    () => Object.entries(decks.collection?.en ?? {}).filter(([, cards]) => cards.length > 0),
     [decks]
   )
   const collectionsJP = useMemo(
-    () => Object.entries(decks.collection.jp ?? {}).filter(([, cards]) => cards.length > 0),
+    () => Object.entries(decks.collection?.jp ?? {}).filter(([, cards]) => cards.length > 0),
     [decks]
   )
 
