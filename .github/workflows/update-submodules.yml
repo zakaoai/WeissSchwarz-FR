@@ -1,0 +1,41 @@
+name: Update submodules
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-submodules-master
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout master with submodules
+        uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 0
+          submodules: recursive
+          token: ${{ secrets.GH_PAT }}
+
+      - name: Update submodules to their configured branches
+        run: git submodule update --init --remote
+
+      - name: Commit and push updated submodule references
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add JP-DB EN-DB
+
+          if git diff --cached --quiet; then
+            echo "Les sous-modules sont déjà à jour."
+            exit 0
+          fi
+
+          git commit -m "chore: update submodules"
+          git push origin HEAD:master
